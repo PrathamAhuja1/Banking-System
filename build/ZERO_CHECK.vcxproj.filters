@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\prath\Downloads\Projects\Banking-System\build\CMakeFiles\23956d1d0dddef45c7c2cd6f5441fa0c\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A14E26AC-E596-301F-852F-947E7A976F6D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

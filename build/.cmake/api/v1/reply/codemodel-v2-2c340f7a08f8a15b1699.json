@@ -1,0 +1,804 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/core",
+					"jsonFile" : "directory-src.core-Debug-27980f60b5df84566cd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/crypto",
+					"jsonFile" : "directory-src.crypto-Debug-560bf3f3d15e3077da86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/crypto",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/password",
+					"jsonFile" : "directory-src.password-Debug-8688af9fab74dd70a5ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/password",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/compression",
+					"jsonFile" : "directory-src.compression-Debug-a7a6c56fdbeca3fbe6bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/compression",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/gui",
+					"jsonFile" : "directory-src.gui-Debug-127846aa570c1dd3fdd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/gui",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "SecureBankingApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-2335a6ba6ede53d1ca12.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SecureBankingApp::@7675e61a69a6135e3026",
+					"jsonFile" : "target-SecureBankingApp-Debug-e5a385e11ac42800a0c0.json",
+					"name" : "SecureBankingApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-dd0c7a329ed873f17e73.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "compression::@5097a40e8717c4e78fd6",
+					"jsonFile" : "target-compression-Debug-15496a8959e49429adfe.json",
+					"name" : "compression",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-Debug-d456dadc953b0027b97e.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "crypto::@f9c2fa495612d34facca",
+					"jsonFile" : "target-crypto-Debug-28be6a9f6fafacf818bc.json",
+					"name" : "crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "passwordmgr::@50bceeaf0612fb2411c9",
+					"jsonFile" : "target-passwordmgr-Debug-d7537e8b7d1361368d4e.json",
+					"name" : "passwordmgr",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-Release-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/core",
+					"jsonFile" : "directory-src.core-Release-27980f60b5df84566cd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/crypto",
+					"jsonFile" : "directory-src.crypto-Release-560bf3f3d15e3077da86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/crypto",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/password",
+					"jsonFile" : "directory-src.password-Release-8688af9fab74dd70a5ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/password",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/compression",
+					"jsonFile" : "directory-src.compression-Release-a7a6c56fdbeca3fbe6bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/compression",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/gui",
+					"jsonFile" : "directory-src.gui-Release-127846aa570c1dd3fdd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/gui",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "SecureBankingApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-2335a6ba6ede53d1ca12.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SecureBankingApp::@7675e61a69a6135e3026",
+					"jsonFile" : "target-SecureBankingApp-Release-53438d9a652f19efaf2e.json",
+					"name" : "SecureBankingApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-dd0c7a329ed873f17e73.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "compression::@5097a40e8717c4e78fd6",
+					"jsonFile" : "target-compression-Release-afbc64a25797b3bb5427.json",
+					"name" : "compression",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-Release-af88919eaa602fd56515.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "crypto::@f9c2fa495612d34facca",
+					"jsonFile" : "target-crypto-Release-f7a68577965f299475b9.json",
+					"name" : "crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "passwordmgr::@50bceeaf0612fb2411c9",
+					"jsonFile" : "target-passwordmgr-Release-5c2f8c9321f308cd30b5.json",
+					"name" : "passwordmgr",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-MinSizeRel-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/core",
+					"jsonFile" : "directory-src.core-MinSizeRel-27980f60b5df84566cd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/crypto",
+					"jsonFile" : "directory-src.crypto-MinSizeRel-560bf3f3d15e3077da86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/crypto",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/password",
+					"jsonFile" : "directory-src.password-MinSizeRel-8688af9fab74dd70a5ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/password",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/compression",
+					"jsonFile" : "directory-src.compression-MinSizeRel-a7a6c56fdbeca3fbe6bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/compression",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/gui",
+					"jsonFile" : "directory-src.gui-MinSizeRel-127846aa570c1dd3fdd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/gui",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "SecureBankingApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-2335a6ba6ede53d1ca12.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SecureBankingApp::@7675e61a69a6135e3026",
+					"jsonFile" : "target-SecureBankingApp-MinSizeRel-56e9ddaaacb525c8b8b5.json",
+					"name" : "SecureBankingApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-dd0c7a329ed873f17e73.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "compression::@5097a40e8717c4e78fd6",
+					"jsonFile" : "target-compression-MinSizeRel-82bd97721a049e7254e4.json",
+					"name" : "compression",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-MinSizeRel-f3a3e4e57aae4dce0c55.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "crypto::@f9c2fa495612d34facca",
+					"jsonFile" : "target-crypto-MinSizeRel-1305ba7250b7d9e20429.json",
+					"name" : "crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "passwordmgr::@50bceeaf0612fb2411c9",
+					"jsonFile" : "target-passwordmgr-MinSizeRel-293d03ab293f64d7db75.json",
+					"name" : "passwordmgr",
+					"projectIndex" : 0
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"jsonFile" : "directory-src-RelWithDebInfo-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/core",
+					"jsonFile" : "directory-src.core-RelWithDebInfo-27980f60b5df84566cd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/core",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/crypto",
+					"jsonFile" : "directory-src.crypto-RelWithDebInfo-560bf3f3d15e3077da86.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/crypto",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/password",
+					"jsonFile" : "directory-src.password-RelWithDebInfo-8688af9fab74dd70a5ae.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/password",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "src/compression",
+					"jsonFile" : "directory-src.compression-RelWithDebInfo-a7a6c56fdbeca3fbe6bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/compression",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/gui",
+					"jsonFile" : "directory-src.gui-RelWithDebInfo-127846aa570c1dd3fdd1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/gui",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "SecureBankingApp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-2335a6ba6ede53d1ca12.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "SecureBankingApp::@7675e61a69a6135e3026",
+					"jsonFile" : "target-SecureBankingApp-RelWithDebInfo-2e1f674f08b60296498c.json",
+					"name" : "SecureBankingApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-dd0c7a329ed873f17e73.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "compression::@5097a40e8717c4e78fd6",
+					"jsonFile" : "target-compression-RelWithDebInfo-0070f84ff69503a4afbd.json",
+					"name" : "compression",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "core::@0618756b1ff51bca1a0e",
+					"jsonFile" : "target-core-RelWithDebInfo-981a7dd487186b18eec6.json",
+					"name" : "core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "crypto::@f9c2fa495612d34facca",
+					"jsonFile" : "target-crypto-RelWithDebInfo-23424c3d0a265116a786.json",
+					"name" : "crypto",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "passwordmgr::@50bceeaf0612fb2411c9",
+					"jsonFile" : "target-passwordmgr-RelWithDebInfo-c8c4d810d62a75e585c6.json",
+					"name" : "passwordmgr",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/prath/Downloads/Projects/Banking-System/build",
+		"source" : "C:/Users/prath/Downloads/Projects/Banking-System"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

@@ -1,0 +1,5 @@
+add_subdirectory(core)
+add_subdirectory(crypto)
+add_subdirectory(password)
+add_subdirectory(compression)
+add_subdirectory(gui)

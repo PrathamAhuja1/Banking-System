@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/core/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/crypto/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/password/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/compression/cmake_install.cmake",
+		"C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

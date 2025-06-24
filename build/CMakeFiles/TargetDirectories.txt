@@ -1,0 +1,7 @@
+C:/Users/prath/Downloads/Projects/Banking-System/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/src/core/CMakeFiles/core.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/src/crypto/CMakeFiles/crypto.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/src/password/CMakeFiles/passwordmgr.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/src/compression/CMakeFiles/compression.dir
+C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/CMakeFiles/SecureBankingApp.dir
