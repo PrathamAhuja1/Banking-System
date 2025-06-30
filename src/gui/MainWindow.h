@@ -1,16 +1,17 @@
-// MainWindow.h
 #pragma once
 #include <QMainWindow>
 #include <memory>
-
+using namespace std;
 namespace Ui { class MainWindow; } // if using .ui; here we build UI in code.
+
+#include "../core/Bank.h"
+#include "../password/PasswordManager.h"
+
 
 class QTabWidget;
 class QTableWidget;
 class QPushButton;
 
-#include "../core/Bank.h"
-#include "../password/PasswordManager.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -32,8 +33,8 @@ private slots:
     void onViewArchive();
 
 private:
-    std::unique_ptr<Bank> bank;
-    std::unique_ptr<PasswordManager> pwdMgr;
+    unique_ptr<Bank> bank;
+    unique_ptr<PasswordManager> pwdMgr;
     QString masterPassword;
 
     // UI elements

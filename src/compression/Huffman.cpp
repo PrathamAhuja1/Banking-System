@@ -5,8 +5,8 @@
 #include <queue>
 #include <unordered_map>
 #include <cstdint>
-#include <bitset>
-#include <memory>
+#include<functional>
+using namespace std;
 
 // Node for Huffman tree
 struct Node {
@@ -23,7 +23,7 @@ struct NodeCmp {
     }
 };
 
-static void buildCodes(Node* root, std::vector<std::string> &codes, std::string &prefix) {
+static void buildCodes(Node* root, vector<string> &codes, string &prefix) {
     if (!root) return;
     if (!root->left && !root->right) {
         codes[root->byte] = prefix;
@@ -46,11 +46,11 @@ static void deleteTree(Node* root) {
 
 // Write bits to output stream, buffering into bytes
 class BitWriter {
-    std::ofstream &out;
+    ofstream &out;
     uint8_t buffer;
     int bitCount;
 public:
-    BitWriter(std::ofstream &o): out(o), buffer(0), bitCount(0) {}
+    BitWriter(ofstream &o): out(o), buffer(0), bitCount(0) {}
     void writeBit(int b) {
         buffer = (buffer << 1) | (b & 1);
         bitCount++;
@@ -60,7 +60,7 @@ public:
             bitCount = 0;
         }
     }
-    void writeCode(const std::string &code) {
+    void writeCode(const string &code) {
         for (char c: code) writeBit(c == '1' ? 1 : 0);
     }
     void flush() {
@@ -75,11 +75,11 @@ public:
 
 // Read bits from input stream
 class BitReader {
-    std::ifstream &in;
+    ifstream &in;
     uint8_t buffer;
     int bitCount;
 public:
-    BitReader(std::ifstream &i): in(i), buffer(0), bitCount(0) {}
+    BitReader(ifstream &i): in(i), buffer(0), bitCount(0) {}
     // Return -1 on EOF
     int readBit() {
         if (bitCount == 0) {
@@ -95,11 +95,11 @@ public:
     }
 };
 
-bool compressFile(const std::string &inputPath, const std::string &outputPath) {
-    std::ifstream in(inputPath, std::ios::binary);
+bool compressFile(const string &inputPath, const string &outputPath) {
+    ifstream in(inputPath, ios::binary);
     if (!in) return false;
     // Frequency map
-    std::vector<size_t> freq(256, 0);
+    vector<size_t> freq(256, 0);
     char c;
     while (in.get(c)) {
         uint8_t b = static_cast<uint8_t>(c);
@@ -109,7 +109,7 @@ bool compressFile(const std::string &inputPath, const std::string &outputPath) {
     in.seekg(0);
 
     // Build min-heap
-    std::priority_queue<Node*, std::vector<Node*>, NodeCmp> pq;
+    priority_queue<Node*, vector<Node*>, NodeCmp> pq;
     for (int i = 0; i < 256; ++i) {
         if (freq[i] > 0) {
             pq.push(new Node(static_cast<uint8_t>(i), freq[i]));
@@ -131,14 +131,14 @@ bool compressFile(const std::string &inputPath, const std::string &outputPath) {
     Node* root = pq.top();
 
     // Build codes
-    std::vector<std::string> codes(256);
-    std::string prefix;
+    vector<string> codes(256);
+    string prefix;
     buildCodes(root, codes, prefix);
 
-    std::ofstream out(outputPath, std::ios::binary);
+    ofstream out(outputPath, ios::binary);
     if (!out) { deleteTree(root); return false; }
     // Serialize tree: preorder. Use '1' + byte for leaf, '0' for internal.
-    std::function<void(Node*)> writeTree = [&](Node* node) {
+    function<void(Node*)> writeTree = [&](Node* node) {
         if (!node) return;
         if (!node->left && !node->right) {
             out.put(char(1));
@@ -165,12 +165,12 @@ bool compressFile(const std::string &inputPath, const std::string &outputPath) {
     return true;
 }
 
-bool decompressFile(const std::string &inputPath, const std::string &outputPath) {
-    std::ifstream in(inputPath, std::ios::binary);
+bool decompressFile(const string &inputPath, const string &outputPath) {
+    ifstream in(inputPath, ios::binary);
     if (!in) return false;
 
     // Rebuild tree
-    std::function<Node*()> readTree = [&]() -> Node* {
+    function<Node*()> readTree = [&]() -> Node* {
         int flag = in.get();
         if (flag == EOF) return nullptr;
         if (flag == 1) {
@@ -190,7 +190,7 @@ bool decompressFile(const std::string &inputPath, const std::string &outputPath)
     // Read separator
     in.get(); // assume the marker
 
-    std::ofstream out(outputPath, std::ios::binary);
+    ofstream out(outputPath, ios::binary);
     if (!out) { deleteTree(root); return false; }
 
     BitReader reader(in);

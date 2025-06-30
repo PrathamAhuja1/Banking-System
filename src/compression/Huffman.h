@@ -1,10 +1,12 @@
 // Huffman.h
 #pragma once
 #include <string>
+using namespace std;
 
-namespace Huffman {
+class Huffman {
 
-bool compressFile(const std::string &inputPath, const std::string &outputPath);
-bool decompressFile(const std::string &inputPath, const std::string &outputPath);
+    public:
+     static bool compressFile(const string &inputPath, const string &outputPath);
+        static bool decompressFile(const string &inputPath, const string &outputPath);
 
-}
+};

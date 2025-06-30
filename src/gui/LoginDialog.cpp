@@ -1,4 +1,3 @@
-// LoginDialog.cpp
 #include "LoginDialog.h"
 #include <QVBoxLayout>
 #include <QLabel>

@@ -1,32 +1,32 @@
-// PasswordManager.h
 #pragma once
 #include <string>
 #include <vector>
 #include <mutex>
+using namespace std;
 
 struct VaultEntry {
-    std::string service;
-    std::string username;
-    std::string password;
-    std::string serialize() const;
-    static VaultEntry deserialize(const std::string &line);
+    string service;
+    string username;
+    string password;
+    string serialize() const;
+    static VaultEntry deserialize(const string &line);
 };
 
 class PasswordManager {
 public:
-    PasswordManager(const std::string &vaultFile, const std::string &masterPassword);
+    PasswordManager(const string &vaultFile, const string &masterPassword);
 
     bool load();   // decrypt vault to memory
     bool save();   // encrypt vault to disk
 
-    std::vector<VaultEntry> listEntries();
-    bool addEntry(const std::string &service, const std::string &username, const std::string &password);
-    bool deleteEntry(const std::string &service);
+    vector<VaultEntry> listEntries();
+    bool addEntry(const string &service, const string &username, const string &password);
+    bool deleteEntry(const string &service);
 
 private:
-    std::vector<VaultEntry> entries;
-    std::string vaultFilePath;
-    std::string tempPlainVault;
-    std::string masterPwd;
-    std::mutex mtx;
+    vector<VaultEntry> entries;
+    string vaultFilePath;
+    string tempPlainVault;
+    string masterPwd;
+    mutex mtx;
 };

@@ -1,4 +1,3 @@
-// MainWindow.cpp
 #include "MainWindow.h"
 #include <QTabWidget>
 #include <QTableWidget>
@@ -11,8 +10,14 @@
 #include <filesystem>
 #include <chrono>
 #include <thread>
+#include <QTextEdit> 
+#include <QDialog>  
+#include <fstream>   
 
+#include"../crypto/CryptoUtils.h"
 #include "../compression/Huffman.h"
+
+using namespace std;
 
 MainWindow::MainWindow(const QString &masterPwd, QWidget *parent)
     : QMainWindow(parent), masterPassword(masterPwd) {
@@ -20,8 +25,8 @@ MainWindow::MainWindow(const QString &masterPwd, QWidget *parent)
     QString dataFile = "accounts.dat";
     QString logFile = "transactions.dat";
     QString vaultFile = "vault.dat";
-    bank = std::make_unique<Bank>(dataFile.toStdString(), logFile.toStdString(), masterPwd.toStdString());
-    pwdMgr = std::make_unique<PasswordManager>(vaultFile.toStdString(), masterPwd.toStdString());
+    bank = make_unique<Bank>(dataFile.toStdString(), logFile.toStdString(), masterPwd.toStdString());
+    pwdMgr = make_unique<PasswordManager>(vaultFile.toStdString(), masterPwd.toStdString());
     bool ok1 = bank->load();
     bool ok2 = pwdMgr->load();
     if (!ok1) {
@@ -194,7 +199,7 @@ void MainWindow::onDeleteVaultEntry() {
 
 void MainWindow::onArchiveLogs() {
     QString inPath = "transactions.dat";
-    if (!std::filesystem::exists(inPath.toStdString())) {
+    if (!filesystem::exists(inPath.toStdString())) {
         QMessageBox::information(this, "Info", "No transaction log to archive.");
         return;
     }
@@ -205,34 +210,34 @@ void MainWindow::onArchiveLogs() {
         return;
     }
     // Choose output archive path
-    auto now = std::chrono::system_clock::now();
-    auto t_c = std::chrono::system_clock::to_time_t(now);
-    std::tm tm;
+    auto now = chrono::system_clock::now();
+    auto t_c = chrono::system_clock::to_time_t(now);
+    tm tm;
 #if defined(_WIN32)
     localtime_s(&tm, &t_c);
 #else
     localtime_r(&t_c, &tm);
 #endif
     char buf[32];
-    std::strftime(buf, sizeof(buf), "archive_%Y%m%d_%H%M%S.huff", &tm);
+    strftime(buf, sizeof(buf), "archive_%Y%m%d_%H%M%S.huff", &tm);
     QString outPath = QFileDialog::getSaveFileName(this, "Save Archive As", buf, "Huffman Archive (*.huff)");
     if (outPath.isEmpty()) {
-        std::filesystem::remove(tempPlain.toStdString());
+        filesystem::remove(tempPlain.toStdString());
         return;
     }
     // Compress
     bool ok = Huffman::compressFile(tempPlain.toStdString(), outPath.toStdString());
-    std::filesystem::remove(tempPlain.toStdString());
+    filesystem::remove(tempPlain.toStdString());
     if (!ok) {
         QMessageBox::warning(this, "Error", "Compression failed.");
         return;
     }
     QMessageBox::information(this, "Success", "Archive created: " + outPath);
     // Optionally clear the log: here we truncate encrypted file
-    std::ofstream empty("temp_empty.txt", std::ios::trunc);
+    ofstream empty("temp_empty.txt", ios::trunc);
     empty.close();
     CryptoUtils::encryptFile("temp_empty.txt", inPath.toStdString(), masterPassword.toStdString());
-    std::filesystem::remove("temp_empty.txt");
+    filesystem::remove("temp_empty.txt");
 }
 
 void MainWindow::onViewArchive() {
@@ -244,10 +249,10 @@ void MainWindow::onViewArchive() {
         return;
     }
     // Display in a dialog
-    std::ifstream in(tempOut.toStdString());
-    std::string content((std::istreambuf_iterator<char>(in)), {});
+    ifstream in(tempOut.toStdString());
+    string content((istreambuf_iterator<char>(in)), {});
     in.close();
-    std::filesystem::remove(tempOut.toStdString());
+    filesystem::remove(tempOut.toStdString());
     QDialog dlg(this);
     dlg.setWindowTitle("Archived Log Contents");
     QVBoxLayout *layout = new QVBoxLayout(&dlg);

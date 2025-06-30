@@ -1,4 +1,3 @@
-// LoginDialog.h
 #pragma once
 #include <QDialog>
 
