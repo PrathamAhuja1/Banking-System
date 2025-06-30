@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/SecureBankingApp.exe"
+			"path" : "MinSizeRel/SecureBankingApp.exe"
 		},
 		{
-			"path" : "Release/SecureBankingApp.pdb"
+			"path" : "MinSizeRel/SecureBankingApp.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -230,7 +230,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG -std:c++17"
 				}
 			],
 			"defines" : 
@@ -284,7 +284,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/SecureBankingApp_autogen/include_Release"
+					"path" : "C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/SecureBankingApp_autogen/include_MinSizeRel"
 				},
 				{
 					"backtrace" : 33,
@@ -364,15 +364,15 @@
 		},
 		{
 			"backtrace" : 3,
+			"id" : "passwordmgr::@50bceeaf0612fb2411c9"
+		},
+		{
+			"backtrace" : 3,
 			"id" : "crypto::@f9c2fa495612d34facca"
 		},
 		{
 			"backtrace" : 3,
 			"id" : "compression::@5097a40e8717c4e78fd6"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "passwordmgr::@50bceeaf0612fb2411c9"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
@@ -384,7 +384,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
@@ -402,22 +402,22 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\core\\Release\\core.lib",
+				"fragment" : "..\\core\\MinSizeRel\\core.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\crypto\\Release\\crypto.lib",
+				"fragment" : "..\\crypto\\MinSizeRel\\crypto.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\password\\Release\\passwordmgr.lib",
+				"fragment" : "..\\password\\MinSizeRel\\passwordmgr.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\compression\\Release\\compression.lib",
+				"fragment" : "..\\compression\\MinSizeRel\\compression.lib",
 				"role" : "libraries"
 			},
 			{
@@ -462,7 +462,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\crypto\\Release\\crypto.lib",
+				"fragment" : "..\\crypto\\MinSizeRel\\crypto.lib",
 				"role" : "libraries"
 			},
 			{
@@ -517,7 +517,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/src/gui/SecureBankingApp_autogen/mocs_compilation_Release.cpp",
+			"path" : "build/src/gui/SecureBankingApp_autogen/mocs_compilation_MinSizeRel.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

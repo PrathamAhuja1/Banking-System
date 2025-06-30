@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/SecureBankingApp.exe"
+			"path" : "Debug/SecureBankingApp.exe"
 		},
 		{
-			"path" : "RelWithDebInfo/SecureBankingApp.pdb"
+			"path" : "Debug/SecureBankingApp.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -230,7 +230,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
 				}
 			],
 			"defines" : 
@@ -246,10 +246,6 @@
 				{
 					"backtrace" : 3,
 					"define" : "QT_GUI_LIB"
-				},
-				{
-					"backtrace" : 3,
-					"define" : "QT_NO_DEBUG"
 				},
 				{
 					"backtrace" : 3,
@@ -284,7 +280,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/SecureBankingApp_autogen/include_RelWithDebInfo"
+					"path" : "C:/Users/prath/Downloads/Projects/Banking-System/build/src/gui/SecureBankingApp_autogen/include_Debug"
 				},
 				{
 					"backtrace" : 33,
@@ -364,15 +360,15 @@
 		},
 		{
 			"backtrace" : 3,
+			"id" : "passwordmgr::@50bceeaf0612fb2411c9"
+		},
+		{
+			"backtrace" : 3,
 			"id" : "crypto::@f9c2fa495612d34facca"
 		},
 		{
 			"backtrace" : 3,
 			"id" : "compression::@5097a40e8717c4e78fd6"
-		},
-		{
-			"backtrace" : 3,
-			"id" : "passwordmgr::@50bceeaf0612fb2411c9"
 		},
 		{
 			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
@@ -384,7 +380,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
 				"role" : "flags"
 			},
 			{
@@ -402,22 +398,22 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\core\\RelWithDebInfo\\core.lib",
+				"fragment" : "..\\core\\Debug\\core.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\crypto\\RelWithDebInfo\\crypto.lib",
+				"fragment" : "..\\crypto\\Debug\\crypto.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\password\\RelWithDebInfo\\passwordmgr.lib",
+				"fragment" : "..\\password\\Debug\\passwordmgr.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\compression\\RelWithDebInfo\\compression.lib",
+				"fragment" : "..\\compression\\Debug\\compression.lib",
 				"role" : "libraries"
 			},
 			{
@@ -462,12 +458,12 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "..\\crypto\\RelWithDebInfo\\crypto.lib",
+				"fragment" : "..\\crypto\\Debug\\crypto.lib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 32,
-				"fragment" : "C:\\Users\\prath\\Downloads\\Projects\\Banking-System\\vcpkg\\installed\\x64-windows\\lib\\libcrypto.lib",
+				"fragment" : "C:\\Users\\prath\\Downloads\\Projects\\Banking-System\\vcpkg\\installed\\x64-windows\\debug\\lib\\libcrypto.lib",
 				"role" : "libraries"
 			},
 			{
@@ -517,7 +513,7 @@
 			"backtrace" : 0,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/src/gui/SecureBankingApp_autogen/mocs_compilation_RelWithDebInfo.cpp",
+			"path" : "build/src/gui/SecureBankingApp_autogen/mocs_compilation_Debug.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
