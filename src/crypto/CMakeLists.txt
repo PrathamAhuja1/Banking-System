@@ -1,3 +1,5 @@
+find_package(OpenSSL REQUIRED)
+
 add_library(crypto
     CryptoUtils.cpp CryptoUtils.h
 )

@@ -1,4 +1,3 @@
-// Huffman.cpp
 #include "Huffman.h"
 #include <fstream>
 #include <vector>
@@ -95,7 +94,7 @@ public:
     }
 };
 
-bool compressFile(const string &inputPath, const string &outputPath) {
+bool Huffman::compressFile(const string &inputPath, const string &outputPath) {
     ifstream in(inputPath, ios::binary);
     if (!in) return false;
     // Frequency map
@@ -165,7 +164,7 @@ bool compressFile(const string &inputPath, const string &outputPath) {
     return true;
 }
 
-bool decompressFile(const string &inputPath, const string &outputPath) {
+bool Huffman::decompressFile(const string &inputPath, const string &outputPath) {
     ifstream in(inputPath, ios::binary);
     if (!in) return false;
 
